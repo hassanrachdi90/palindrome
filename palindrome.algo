@@ -1,0 +1,11 @@
+FUNCTION isPalindrome(VAR word: STRING)
+BEGIN
+    IF (word.length <= 1) THEN
+        RETURN TRUE
+    END_IF
+    IF (word[0] != word[word.length - 1]) THEN
+        RETURN FALSE
+    ELSE
+        RETURN isPalindrome(SUBSTRING(word, 1, word.length-1))
+    END_IF
+END
